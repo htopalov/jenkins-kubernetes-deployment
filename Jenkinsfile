@@ -14,6 +14,7 @@ pipeline {
       steps{
         script {
           dockerImage = docker.build dockerimagename
+          args '-v /etc/ssl/certs:/etc/ssl/certs'
         }
       }
     }
